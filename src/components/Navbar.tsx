@@ -1,15 +1,21 @@
-import { ReactElement, FC, ReactNode } from "react";
+import { ReactElement, FC } from "react";
 
 import "./navbar.scss";
 
 export default function Navbar(): ReactElement {
   return (
     <nav className="navbar">
-      <Bg />
+      a
+      <LinksContainer />
     </nav>
   );
 }
 
-const Bg: FC = (): ReactElement => {
-  return <div className="scene"></div>;
+const LinksContainer: FC = (): ReactElement => {
+  return (
+    <div className="links-container">
+      <a href="/">Home</a>
+      <a href="/">Projects</a>
+    </div>
+  );
 };

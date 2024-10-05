@@ -1,5 +1,12 @@
 import { ReactElement } from "react";
 
+import Navbar from "./components/Navbar";
+
 export default function App(): ReactElement {
-  return <>Hello, React!</>;
+  return (
+    <>
+      <Navbar />
+      Hello, React!
+    </>
+  );
 }
