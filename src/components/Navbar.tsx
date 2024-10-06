@@ -1,5 +1,4 @@
 import { ReactElement, FC } from "react";
-import { AiFillFire } from "react-icons/ai";
 
 import "./navbar.scss";
 
