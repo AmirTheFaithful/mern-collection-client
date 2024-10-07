@@ -99,7 +99,14 @@
       weight: 600;
       family: Arial, Helvetica, sans-serif;
     }
-    color: #555;
+    color: #faf;
+    padding: 8px;
     text-decoration: none;
+    background-color: #222a;
+    border-radius: 8px;
+  }
+
+  a.active {
+    color: #fd8;
   }
 }

@@ -1,4 +1,5 @@
 import { ReactElement, FC } from "react";
+import { NavLink } from "react-router-dom";
 
 import "./navbar.scss";
 
@@ -15,17 +16,19 @@ export default function Navbar(): ReactElement {
 
 const Icon: FC = (): ReactElement => {
   return (
-    <a className="nav-logo" href="/">
+    <NavLink className="nav-logo" to="/">
       <img src="https://seeklogo.com/images/M/magento-logo-3EDB101875-seeklogo.com.png" />
-    </a>
+    </NavLink>
   );
 };
 
 const LinksContainer: FC = (): ReactElement => {
   return (
     <div className="links-container">
-      <a href="/">Home</a>
-      <a href="/">Projects</a>
+      <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+        Home
+      </NavLink>
+      <NavLink to="/projects">Projects</NavLink>
     </div>
   );
 };
