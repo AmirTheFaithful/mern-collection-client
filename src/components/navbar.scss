@@ -44,6 +44,16 @@
   }
 }
 
+.nav-light {
+  box-shadow: 0 4px 24px #2223, inset 0 0 16px #cef;
+  background-color: #9dfa;
+}
+
+.nav-dark {
+  box-shadow: 0 4px 24px #4afc, inset 0 0 16px #cef5;
+  background-color: #28c2;
+}
+
 /* The navbar itself*/
 .navbar {
   position: sticky;
@@ -57,17 +67,17 @@
   width: 50%;
   padding: 16px;
   transform: translateX(-50%);
-  box-shadow: 0 4px 24px #2223, inset 0 0 16px #cef;
   border-radius: 25px;
-  transition: opacity 1s;
-  background-color: #9dfa;
+  transition: visibility 1s, opacity 1s, background-color 1s, box-shadow 1s;
 }
 
 .showing {
+  visibility: visible;
   opacity: 1;
 }
 
 .hidden {
+  visibility: hidden;
   opacity: 0;
 }
 

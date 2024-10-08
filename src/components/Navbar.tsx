@@ -1,13 +1,16 @@
-import { ReactElement, FC } from "react";
+import { ReactElement, FC, useState } from "react";
 import { NavLink } from "react-router-dom";
+
+import { useThemeContext } from "../context/theme-ctx";
 
 import "./navbar.scss";
 
 export default function Navbar(): ReactElement {
   handlePageScroll();
+  const { theme } = useThemeContext();
 
   return (
-    <nav className="navbar hidden">
+    <nav className={`navbar hidden nav-${theme}`}>
       <Icon />
       <LinksContainer />
     </nav>

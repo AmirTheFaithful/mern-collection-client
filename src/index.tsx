@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM, { Root } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
+import { ThemeContextProvider } from "./context/theme-ctx";
 import App from "./App";
 
 import "./index.scss";
@@ -12,8 +13,10 @@ const root: Root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <ThemeContextProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ThemeContextProvider>
   </React.StrictMode>
 );
