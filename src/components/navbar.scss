@@ -1,122 +1,45 @@
-@keyframes BG {
-  0% {
-    background-color: yellow;
-  }
-
-  10% {
-    background-color: lime;
-  }
-
-  20% {
-    background-color: salmon;
-  }
-
-  30% {
-    background-color: magenta;
-  }
-
-  40% {
-    background-color: purple;
-  }
-
-  50% {
-    background-color: turquoise;
-  }
-
-  60% {
-    background-color: blue;
-  }
-
-  70% {
-    background-color: red;
-  }
-
-  80% {
-    background-color: violet;
-  }
-
-  90% {
-    background-color: orchid;
-  }
-
-  100% {
-    background-color: yellowgreen;
-  }
-}
+@import "../utils";
 
 .nav-light {
-  box-shadow: 0 4px 24px #2223, inset 0 0 16px #cef;
-  background-color: #9dfa;
+  box-shadow: 0 4px 24px #2223;
+  background-color: #9df4;
 }
 
 .nav-dark {
-  box-shadow: 0 4px 24px #4afc, inset 0 0 16px #cef5;
+  box-shadow: 0 4px 24px #4afc;
   background-color: #28c2;
 }
 
-/* The navbar itself*/
+/* The navbar itself */
 .navbar {
+  $td: 1s; // Transition duration
   position: sticky;
-  top: 6%;
-  left: 50%;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  width: 50%;
-  padding: 16px;
-  transform: translateX(-50%);
   border-radius: 25px;
-  transition: visibility 1s, opacity 1s, background-color 1s, box-shadow 1s;
+  @include blurify(24px);
+  transition: visibility $td, opacity $td, background-color $td, box-shadow $td;
 }
 
-.showing {
-  visibility: visible;
-  opacity: 1;
-}
-
-.hidden {
-  visibility: hidden;
-  opacity: 0;
-}
-
-/* Logo inside the navbar */
-.nav-logo {
-  $logo-radius: 50%;
-  $size: 30px;
-
-  width: $size;
-  height: $size;
-  border-radius: $logo-radius;
-  background-color: #fffa;
-
-  img {
-    border-radius: $logo-radius;
-    width: $size;
-    height: $size;
+@media (min-width: 320px) {
+  .navbar {
+    @include py(6px);
+    @include px(10px);
+    top: 5%;
+    left: 15%;
+    width: 70%;
   }
 }
 
-/* Navbar links section */
-.links-container {
-  display: flex;
-  align-items: center;
-  column-gap: 20px;
-
-  a {
-    font: {
-      weight: 600;
-      family: Arial, Helvetica, sans-serif;
-    }
-    color: #faf;
-    padding: 8px;
-    text-decoration: none;
-    background-color: #222a;
-    border-radius: 8px;
-  }
-
-  a.active {
-    color: #fd8;
+@media (min-width: 1025px) {
+  .navbar {
+    @include py(12px);
+    @include px(20px);
+    top: 3%;
+    left: 25%;
+    width: 50%;
   }
 }

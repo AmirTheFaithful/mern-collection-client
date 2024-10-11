@@ -1,24 +1,33 @@
-import { FC, ReactElement, ChangeEventHandler, useState } from "react";
+import { FC, ReactElement, useState, ChangeEventHandler } from "react";
 
-interface Props {
-  handleSwitch: ChangeEventHandler;
-  isSwitched: boolean;
-}
+import { useThemeContext } from "../context/theme-ctx";
 
-const ThemeSwitcher: FC<Props> = ({
-  handleSwitch,
-  isSwitched,
-}): ReactElement => {
+import "./theme-switcher.scss";
+
+const ThemeSwitcher: FC = (): ReactElement => {
+  const { theme, setTheme } = useThemeContext();
+  const [isDark, setIsDark] = useState<boolean>(theme === "dark");
+
+  const handleChange: ChangeEventHandler = (): void => {
+    if (theme === "light") {
+      setIsDark(true);
+      setTheme("dark");
+    } else {
+      setIsDark(false);
+      setTheme("light");
+    }
+  };
+
   return (
-    <div className="theme-switcher">
+    <div className={`theme-switcher toggle-${theme}`}>
       <input
         type="checkbox"
-        id="theme-switch"
-        className="theme-toggle"
-        onChange={handleSwitch}
-        checked={isSwitched}
+        id="check"
+        className="theme-switcher-toggle"
+        checked={isDark}
+        onChange={handleChange}
       />
-      <label htmlFor="theme-switch">Dark Mode</label>
+      <label htmlFor="check"></label>
     </div>
   );
 };

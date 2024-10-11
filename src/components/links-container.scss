@@ -1,0 +1,30 @@
+.links-container {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+
+  a {
+    font: {
+      weight: 600;
+      family: Arial, Helvetica, sans-serif;
+    }
+    text-decoration: none;
+    border-radius: 8px;
+  }
+
+  .reg-link-light {
+    color: #23f;
+  }
+
+  .reg-link-dark {
+    color: #faf;
+  }
+
+  .active-light {
+    color: #f80;
+  }
+
+  .active-dark {
+    color: #fd8;
+  }
+}

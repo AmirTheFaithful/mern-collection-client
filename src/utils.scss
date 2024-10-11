@@ -1,0 +1,24 @@
+@mixin py($y) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
+@mixin px($x) {
+  padding-left: $x;
+  padding-right: $x;
+}
+
+@mixin my($y) {
+  margin-top: $y;
+  margin-bottom: $y;
+}
+
+@mixin mx($x) {
+  margin-left: $x;
+  margin-right: $x;
+}
+
+@mixin blurify($val) {
+  backdrop-filter: blur($val);
+  -webkit-backdrop-filter: blur($val);
+}

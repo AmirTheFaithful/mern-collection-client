@@ -1,0 +1,15 @@
+.nav-logo {
+  $logo-radius: 50%;
+  $size: 30px;
+
+  width: $size;
+  height: $size;
+  border-radius: $logo-radius;
+  background-color: #fffa;
+
+  img {
+    border-radius: $logo-radius;
+    width: $size;
+    height: $size;
+  }
+}

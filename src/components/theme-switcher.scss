@@ -1,0 +1,66 @@
+.toggle-dark {
+  #check + label::before {
+    background-color: #44a;
+  }
+
+  #check + label::after {
+    background-color: #abf;
+  }
+}
+
+.toggle-light {
+  #check + label::before {
+    background-color: #322;
+  }
+
+  #check + label::after {
+    background-color: #fea;
+  }
+}
+
+.theme-switcher {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-toggle {
+    visibility: hidden;
+  }
+
+  &-toggle + label {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 1.5em;
+  }
+
+  &-toggle + label::before {
+    content: "";
+
+    width: 2em;
+    height: 1em;
+    transition: background-color 250ms ease-in-out;
+    margin-right: 0.5em;
+    border-radius: 1em;
+  }
+
+  &-toggle + label::after {
+    content: "";
+
+    position: absolute;
+    left: 0.7em;
+
+    width: 0.7em;
+    height: 0.7em;
+    transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
+    border-radius: 1em;
+  }
+
+  &-toggle:checked + label::after {
+    transform: translateX(150%);
+  }
+}
