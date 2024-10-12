@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 
-import { useThemeContext } from "../context/theme-ctx";
+import { useThemeContext } from "../../../context/theme-ctx";
 import Logo from "./Logo";
 import LinksContainer from "./LinksContainer";
 

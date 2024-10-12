@@ -1,6 +1,6 @@
 import { FC, ReactElement, useState, ChangeEventHandler } from "react";
 
-import { useThemeContext } from "../context/theme-ctx";
+import { useThemeContext } from "../../../context/theme-ctx";
 
 import "./theme-switcher.scss";
 

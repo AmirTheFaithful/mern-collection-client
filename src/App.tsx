@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { useThemeContext } from "./context/theme-ctx";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbars/1";
 import HomePage from "./pages/home-page";
 import ProjectsPage from "./pages/projects";
 

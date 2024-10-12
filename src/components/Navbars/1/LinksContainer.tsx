@@ -1,7 +1,7 @@
 import { ReactElement, FC } from "react";
 import { NavLink } from "react-router-dom";
 
-import { useThemeContext } from "../context/theme-ctx";
+import { useThemeContext } from "../../../context/theme-ctx";
 import ThemeSwitcher from "./ThemeSwitcher";
 
 import "./links-container.scss";
