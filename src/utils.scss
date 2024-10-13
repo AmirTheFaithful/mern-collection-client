@@ -23,7 +23,7 @@
   -webkit-backdrop-filter: blur($val);
 }
 
-@mixin flexify($ai, $jc, $fd) {
+@mixin flexify($ai, $jc, $fd: row) {
   display: flex;
   align-items: $ai;
   justify-content: $jc;

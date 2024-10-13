@@ -1,3 +1,5 @@
+@import "../../../utils";
+
 [data-theme="light"] {
   --bg-pr: #aaaa;
   --bg-sc: #7262;
@@ -19,9 +21,7 @@
   top: 5%;
   left: 15%;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flexify(center, space-between);
 
   width: 70%;
   height: 6%;
