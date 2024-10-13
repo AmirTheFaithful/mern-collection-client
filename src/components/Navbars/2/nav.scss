@@ -1,0 +1,41 @@
+[data-theme="light"] {
+  --bg-pr: #aaaa;
+  --bg-sc: #7262;
+  --lk-ac: #f60;
+  --lk-ic: #24e;
+}
+
+[data-theme="dark"] {
+  --bg-pr: #222c;
+  --bg-sc: #223a;
+  --lk-ac: #faf;
+  --lk-ic: #fff;
+}
+
+.nav {
+  --trns: 0.45s linear;
+
+  position: sticky;
+  top: 5%;
+  left: 15%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 70%;
+  height: 6%;
+  border-radius: 20px;
+  transition: opacity var(--trns), visibility var(--trns);
+  background-color: var(--bg-pr);
+}
+
+.nav-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-show {
+  opacity: 1;
+  visibility: visible;
+}

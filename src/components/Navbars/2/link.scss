@@ -1,0 +1,16 @@
+.nav-link-active {
+  color: var(--lk-ac);
+}
+
+.nav-link-inactive {
+  color: var(--lk-ic);
+}
+
+.nav-link {
+  font: {
+    size: 1.2em;
+    weight: 400;
+    family: Arial, sans-serif;
+  }
+  text-decoration: none;
+}
