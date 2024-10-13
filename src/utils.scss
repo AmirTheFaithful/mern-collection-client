@@ -29,3 +29,8 @@
   justify-content: $jc;
   flex-direaction: $fd;
 }
+
+@mixin blurify($val) {
+  backdrop-filter: blur($val);
+  --webkit-backdrop-filter: blur($val);
+}
