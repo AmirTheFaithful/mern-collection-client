@@ -1,10 +1,13 @@
 @import "../../../utils";
 
+$pr-sh-sz: 0 4px 20px;
+
 [data-theme="light"] {
   --bg-pr: #fff2;
   --bg-sc: #7262;
   --lk-ac: #f60;
   --lk-ic: #24e;
+  --sh-cl: #2222;
 }
 
 [data-theme="dark"] {
@@ -12,6 +15,7 @@
   --bg-sc: #223a;
   --lk-ac: #faf;
   --lk-ic: #fff;
+  --sh-cl: ##fff2;
 }
 
 .nav {
@@ -22,9 +26,13 @@
   left: 15%;
 
   @include flexify(center, space-between);
+  @include blurify(16px);
+  @include px(16px);
+  @include py(10px);
 
   width: 70%;
   height: 6%;
+  box-shadow: $pr-sh-sz var(--sh-cl);
   border-radius: 20px;
   transition: opacity var(--trns), visibility var(--trns);
   background-color: var(--bg-pr);
