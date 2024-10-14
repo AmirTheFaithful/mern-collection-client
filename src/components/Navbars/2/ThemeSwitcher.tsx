@@ -4,7 +4,7 @@ import { FiSun } from "react-icons/fi";
 
 import { useThemeContext } from "../../../context/theme-ctx";
 
-import clickSound from "./click.mp3";
+import clickSound from "../../../assets/audio/click.mp3";
 import "./theme-switcher.scss";
 
 export default (): ReactElement => {
