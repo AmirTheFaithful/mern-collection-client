@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 import { useThemeContext } from "../../../context/theme-ctx";
 import Logo from "../Common/Logo";
+import ThemeSwitcher from "./ThemeSwitcher";
 import Links from "./Links";
 
 import "./nav.scss";
@@ -10,8 +11,9 @@ export default (): ReactElement => {
   const { theme } = useThemeContext();
 
   return (
-    <nav id="navbar" data-theme={theme} className={`nav nav-hidden`}>
+    <nav id="navbar" data-theme={theme} className={`nav nav-showing`}>
       <Logo />
+      <ThemeSwitcher />
       <Links />
     </nav>
   );
@@ -22,12 +24,12 @@ window.addEventListener("scroll", (): void => {
 
   if (!navbar) return;
 
-  if (window.scrollY <= 30) {
+  if (window.scrollY === 0) {
     navbar.classList.remove("nav-showing");
     navbar.classList.add("nav-hidden");
   }
 
-  if (window.scrollY > 30) {
+  if (window.scrollY > 0) {
     navbar.classList.remove("nav-hidden");
     navbar.classList.add("nav-showing");
   }

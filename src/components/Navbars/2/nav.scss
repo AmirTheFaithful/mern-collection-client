@@ -1,13 +1,15 @@
 @import "../../../utils";
 
-$pr-sh-sz: 0 4px 20px;
+$pr-sh-sz: 0 4px 20px 6px;
 
 [data-theme="light"] {
-  --bg-pr: #fff2;
+  --bg-pr: #000000ac;
   --bg-sc: #7262;
-  --lk-ac: #f60;
-  --lk-ic: #24e;
-  --sh-cl: #2222;
+  --lk-ac: #fc6;
+  --lk-ic: #6ae;
+  --sh-cl: #6ae3;
+  --tg-bg: #fea;
+  --tg-cl: #222;
 }
 
 [data-theme="dark"] {
@@ -15,14 +17,15 @@ $pr-sh-sz: 0 4px 20px;
   --bg-sc: #223a;
   --lk-ac: #faf;
   --lk-ic: #fff;
-  --sh-cl: ##fff2;
+  --sh-cl: #fff3;
+  --tg-bg: #247;
+  --tg-cl: #222;
 }
 
 .nav {
   --trns: 0.45s linear;
 
   position: sticky;
-  top: 5%;
   left: 15%;
 
   @include flexify(center, space-between);
@@ -34,16 +37,18 @@ $pr-sh-sz: 0 4px 20px;
   height: 6%;
   box-shadow: $pr-sh-sz var(--sh-cl);
   border-radius: 20px;
-  transition: opacity var(--trns), visibility var(--trns);
+  transition: opacity var(--trns), visibility var(--trns), top 1s;
   background-color: var(--bg-pr);
 }
 
 .nav-hidden {
+  top: 0;
   opacity: 0;
   visibility: hidden;
 }
 
-.nav-show {
+.nav-showing {
+  top: 5%;
   opacity: 1;
   visibility: visible;
 }
