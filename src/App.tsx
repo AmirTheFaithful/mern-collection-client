@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { useThemeContext } from "./context/theme-ctx";
 import Navbar from "./components/Navbars/2";
-import HomePage from "./pages/home-page";
+import HomePage from "./pages/home";
 import ProjectsPage from "./pages/projects";
 
 export default function App(): ReactElement {
