@@ -1,5 +1,5 @@
 @import "../../../utils";
 
 .pic__header {
-  @include flexify(center, unset);
+  @include flexify(center, initial);
 }
