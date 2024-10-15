@@ -5,8 +5,10 @@ import "./pic-header.scss";
 const PicHeader: FC = (): ReactElement => {
   return (
     <section className="pic__top">
-      <img src="" className="pic__top__avatar" />
-      <h3 className="pic__top__username"></h3>
+      <div className="pic__top__author">
+        <img src="" />
+        <h3></h3>
+      </div>
       <time className="pic__top__date"></time>
     </section>
   );
