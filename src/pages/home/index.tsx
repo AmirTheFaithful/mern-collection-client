@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
 
-export default (): ReactElement => {
+export default function HomePage(): ReactElement {
   return <main></main>;
-};
+}
