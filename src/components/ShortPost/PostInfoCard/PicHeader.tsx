@@ -2,14 +2,20 @@ import { FC, ReactElement } from "react";
 
 import "./pic-header.scss";
 
-const PicHeader: FC = (): ReactElement => {
+interface Props {
+  authorAvatar: string;
+  authorName: string;
+  postDate: Date;
+}
+
+const PicHeader: FC<Props> = (props: Props): ReactElement => {
   return (
     <section className="pic__top">
       <div className="pic__top__author">
-        <img src="" />
-        <h3></h3>
+        <img src={props.authorAvatar} alt={`${props.authorName}'s avatar`} />
+        <h3>{props.authorName}</h3>
       </div>
-      <time className="pic__top__date"></time>
+      <time className="pic__top__date">{props.postDate.toString()}</time>
     </section>
   );
 };

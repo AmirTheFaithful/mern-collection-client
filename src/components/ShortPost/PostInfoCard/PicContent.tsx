@@ -2,10 +2,14 @@ import { FC, ReactElement } from "react";
 
 import "./pic-content.scss";
 
-const PicContent: FC = (): ReactElement => {
+const PicContent: FC<{ content: string }> = ({
+  content,
+}: {
+  content: string;
+}): ReactElement => {
   return (
     <section className="pic__content">
-      <p></p>
+      <p>{content}</p>
     </section>
   );
 };
