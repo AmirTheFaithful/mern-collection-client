@@ -19,6 +19,7 @@
   align-items: center;
   justify-content: space-between;
 
+  z-index: 999;
   border-radius: 25px;
   @include blurify(24px);
   transition: visibility $td, opacity $td, background-color $td, box-shadow $td;

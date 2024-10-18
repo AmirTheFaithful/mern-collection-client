@@ -3,11 +3,12 @@ import { ReactElement } from "react";
 import PostInfoCard from "../../components/ShortPost/PostInfoCard";
 
 import "./index.scss";
+import Avatar from "../../assets/images/avatar.jpg";
 
 const user: UserInterface = {
   username: "John Doe",
   email: "john@gmail.com",
-  avatarURL: "",
+  avatarURL: Avatar,
 };
 
 export default function HomePage(): ReactElement {

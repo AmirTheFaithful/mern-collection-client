@@ -5,11 +5,13 @@
 
   &__author {
     @include flexify(center, initial);
+    column-gap: 25px;
 
     img {
-      width: 60px;
-      height: 60px;
+      width: 45px;
+      height: 45px;
       border-radius: 50%;
+      box-shadow: 0 2px 16px #222;
     }
 
     h3 {

@@ -5,11 +5,11 @@
 }
 
 .pic {
-  @include flexify(center, initial, column);
+  @include flexify(initial, initial, column);
   @include blurify(12px);
-  @include py(12px);
-  @include px(16px);
 
+  width: 35%;
+  padding: 20px;
   border-radius: 24px;
   background-image: var(--bg);
 }
