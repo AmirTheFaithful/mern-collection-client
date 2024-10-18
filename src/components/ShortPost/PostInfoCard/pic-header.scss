@@ -1,5 +1,23 @@
 @import "../../../utils";
 
 .pic__header {
-  @include flexify(center, initial);
+  @include flexify(center, space-between);
+
+  &__author {
+    @include flexify(center, initial);
+
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    h3 {
+      font: {
+        size: 22px;
+        family: Arial, Helvetica, sans-serif;
+      }
+      color: #ffff;
+    }
+  }
 }

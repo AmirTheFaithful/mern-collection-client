@@ -1,0 +1,6 @@
+@import "../../utils";
+
+// Rule for home page only
+#page {
+  @include flexify(center, center);
+}

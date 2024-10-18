@@ -17,3 +17,8 @@
 .root-dark {
   background-color: #112;
 }
+
+/* For <main> tags which is unique per single page */
+#page {
+  padding-top: 5%;
+}

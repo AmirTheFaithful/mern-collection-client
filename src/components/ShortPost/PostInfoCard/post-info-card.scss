@@ -1,0 +1,15 @@
+@import "../../../utils";
+
+[data-theme="light"] {
+  --bg: linear-gradient(to top right, #002f07cc, #003082cc);
+}
+
+.pic {
+  @include flexify(center, initial, column);
+  @include blurify(12px);
+  @include py(12px);
+  @include px(16px);
+
+  border-radius: 24px;
+  background-image: var(--bg);
+}

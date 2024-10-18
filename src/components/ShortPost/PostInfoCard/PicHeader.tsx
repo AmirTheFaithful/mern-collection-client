@@ -10,12 +10,12 @@ interface Props {
 
 const PicHeader: FC<Props> = (props: Props): ReactElement => {
   return (
-    <section className="pic__top">
-      <div className="pic__top__author">
+    <section className="pic__header">
+      <div className="pic__header__author">
         <img src={props.authorAvatarURL} alt={`${props.authorName}'s avatar`} />
         <h3>{props.authorName}</h3>
       </div>
-      <time className="pic__top__date">{props.postDate.toString()}</time>
+      <time className="pic__header__date">{`${props.postDate.getDay()}/${props.postDate.getDate()}/${props.postDate.getFullYear()}`}</time>
     </section>
   );
 };
