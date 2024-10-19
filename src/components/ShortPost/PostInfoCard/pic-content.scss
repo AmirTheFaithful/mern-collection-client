@@ -1,0 +1,28 @@
+@import "../../../utils";
+
+[data-theme="light"] {
+  --text-color: #345;
+  --shadow-color: #2226;
+  --background-color: rgba(225, 225, 225, 0.2);
+}
+
+[data-theme="dark"] {
+  --text-color: #eee;
+  --shadow-color: #fffa;
+  --background-color: rgba(16, 16, 16, 0.2);
+}
+
+.pic__content {
+  @include py(10px);
+  @include px(16px);
+  @include blurify(12px);
+
+  font: {
+    size: 20px;
+    family: Arial, Helvetica, sans-serif;
+  }
+  color: var(--text-color);
+  box-shadow: 0 0 16px 2px var(--shadow-color);
+  border-radius: 6px;
+  background-color: var(--background-color);
+}

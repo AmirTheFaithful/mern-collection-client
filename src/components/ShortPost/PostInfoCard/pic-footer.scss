@@ -1,0 +1,50 @@
+@import "../../../utils";
+
+[theme-light="light"] {
+  --text-color: #345;
+  --background-color: rgba(225, 225, 225, 0.2);
+}
+
+[theme-dark="dark"] {
+  --text-color: #eee;
+  --background-color: rgba(16, 16, 16, 0.2);
+}
+
+.pic__footer {
+  @include flexify(center, space-between);
+
+  button {
+    @include blurify(12px);
+
+    font: {
+      size: 16px;
+      family: Arial, Helvetica, sans-serif;
+    }
+    color: var(--text-color);
+    cursor: pointer;
+    border: none;
+    transition: color 0.35s;
+    background-color: var(--background-color);
+  }
+
+  &__like-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+
+    &:hover {
+      color: #2382fe;
+    }
+  }
+
+  &__open-btn {
+    @include py(12px);
+    @include px(20px);
+
+    border-radius: 6px;
+
+    &:hover {
+      color: #2382fe;
+    }
+  }
+}
