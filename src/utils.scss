@@ -34,3 +34,17 @@
   backdrop-filter: blur($val);
   --webkit-backdrop-filter: blur($val);
 }
+
+@function get-text-color($bg) {
+  $r: red($bg);
+  $g: green($bg);
+  $b: blue($bg);
+
+  $brightness: ($r * 0.299 + $g * 0.587 + $b * 0.114);
+
+  @if $brightness > 186 {
+    @return black;
+  } @else {
+    @return white;
+  }
+}

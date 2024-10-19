@@ -1,5 +1,13 @@
 @import "../../../utils";
 
+[data-theme="light"] {
+  --img-sh: 0 2px 16px #2226;
+}
+
+[data-theme="dark"] {
+  --img-sh: 0 2px 16px #fff6;
+}
+
 .pic__header {
   @include flexify(center, space-between);
 
@@ -11,7 +19,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      box-shadow: 0 2px 16px #222;
+      box-shadow: var(--img-sh);
     }
 
     h3 {
@@ -21,5 +29,10 @@
       }
       color: #ffff;
     }
+  }
+
+  &__date {
+    color: contrast(transparent);
+    font-family: "Times New Roman", Georgia;
   }
 }
