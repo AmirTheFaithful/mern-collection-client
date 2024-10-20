@@ -23,7 +23,7 @@ export default function PostInfoCard({
         authorName={user.username}
         postDate={new Date()}
       />
-      <Content content="Hello, World!" />
+      <Content content="Just returned from an incredible trip to Kyiv! 🇺🇦 The stunning architecture of St. Sophia's Cathedral left me in awe, and wandering through the vibrant streets of Andriyivskyy Descent was a highlight. I also enjoyed a peaceful stroll in the expansive parks of the city, soaking in the rich history and culture. Can't wait to share more about my adventures in this beautiful city!" />
       <Footer />
     </article>
   );
