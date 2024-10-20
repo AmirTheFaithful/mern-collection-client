@@ -15,7 +15,7 @@ const PicFooter: FC = (): ReactElement => {
   // The like button will temporarily play the famous click sound
   const audio = new Audio(clickSound);
 
-  // Localization hook
+  // Localisation hook
   const { t } = useTranslation();
 
   return (
