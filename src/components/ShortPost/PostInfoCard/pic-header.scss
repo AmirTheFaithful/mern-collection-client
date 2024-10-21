@@ -1,12 +1,12 @@
 @import "../../../utils";
 
 [data-theme="light"] {
-  --avatar-shadow-image: #2226;
+  --avatar-shadow-color: #2226;
   --data-color: #4448;
 }
 
 [data-theme="dark"] {
-  --img-sh: #fff6;
+  --avatar-shadow-color: #fff6;
   --data-color: #fff8;
 }
 
@@ -21,7 +21,7 @@
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      box-shadow: 0 2px 16px var(--avatar-shadow-image);
+      box-shadow: 0 2px 16px var(--avatar-shadow-color);
     }
 
     h3 {

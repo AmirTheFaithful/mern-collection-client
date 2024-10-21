@@ -3,11 +3,13 @@
 [theme-light="light"] {
   --text-color: #345;
   --background-color: rgba(225, 225, 225, 0.2);
+  --shadow-color: #2226;
 }
 
 [theme-dark="dark"] {
   --text-color: #eee;
   --background-color: rgba(16, 16, 16, 0.2);
+  --shadow-color: #fff6;
 }
 
 .pic__footer {
@@ -23,11 +25,13 @@
     color: var(--text-color);
     cursor: pointer;
     border: none;
+    box-shadow: 0 2px 16px var(--shadow-color);
     transition: color 0.35s;
     background-color: var(--background-color);
   }
 
-  &__like-btn {
+  &__like-btn,
+  &__comments-btn {
     width: 45px;
     height: 45px;
     border-radius: 50%;
