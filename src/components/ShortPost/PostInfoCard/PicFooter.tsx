@@ -52,4 +52,9 @@ const CommentsButton: FC = (): ReactElement => {
   );
 };
 
+// Later should be a common element
+const Badge: FC<{ count: number }> = ({ count }): ReactElement => {
+  return <p className="badge">{count}</p>;
+};
+
 export default PicFooter;

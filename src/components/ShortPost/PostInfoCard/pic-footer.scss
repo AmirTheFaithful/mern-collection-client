@@ -1,15 +1,17 @@
 @import "../../../utils";
 
-[theme-light="light"] {
+[data-theme="light"] {
   --text-color: #345;
   --background-color: rgba(225, 225, 225, 0.2);
   --shadow-color: #2226;
+  --badge-text-color: #f20;
 }
 
-[theme-dark="dark"] {
+[data-theme="dark"] {
   --text-color: #eee;
   --background-color: rgba(16, 16, 16, 0.2);
   --shadow-color: #fff6;
+  --badge-text-color: #1f0;
 }
 
 .pic__footer {
@@ -25,6 +27,7 @@
     color: var(--text-color);
     cursor: pointer;
     border: none;
+    position: relative;
     box-shadow: 0 2px 16px var(--shadow-color);
     transition: color 0.35s;
     background-color: var(--background-color);
@@ -51,4 +54,26 @@
       color: #2382fe;
     }
   }
+}
+
+.badge {
+  @include blurify(12px);
+  @include flexify(center, center);
+
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  font: {
+    size: 10px;
+    weight: 600;
+    family: Arial, Helvetica, sans-serif;
+  }
+  color: var(--badge-text-color);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  box-shadow: 0 2px 16px var(--shadow-color);
+  border-radius: 50%;
+  background-color: rgba(225, 225, 225, 0.2);
 }
