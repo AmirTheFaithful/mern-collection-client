@@ -5,6 +5,7 @@
   --background-color: rgba(225, 225, 225, 0.2);
   --shadow-color: #2226;
   --badge-text-color: #f20;
+  --emoji-selector-bc: rgba(225, 225, 225, 0.6);
 }
 
 [data-theme="dark"] {
@@ -12,6 +13,7 @@
   --background-color: rgba(16, 16, 16, 0.2);
   --shadow-color: #fff6;
   --badge-text-color: #1f0;
+  --emoji-selector-bc: rgba(16, 16, 16, 0.6);
 }
 
 .pic__footer {
@@ -44,6 +46,10 @@
     }
   }
 
+  &__like-btn {
+    z-index: 10;
+  }
+
   &__open-btn {
     @include py(12px);
     @include px(20px);
@@ -53,6 +59,43 @@
     &:hover {
       color: #2382fe;
     }
+  }
+
+  .emoji-selector {
+    @include blurify(12px);
+
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+
+    height: 45px;
+    z-index: 5;
+    box-shadow: 0 2px 16px 2px var(--shadow-color);
+    transition: width 0.35s, visibility 0.35s, transform 0.35s;
+    padding-left: 55px;
+    border-radius: 9999px;
+    background-color: var(--background-color);
+
+    &__icon {
+      transition: transform 0.35s;
+
+      &:hover {
+        transform: translateY(-7px);
+      }
+    }
+  }
+
+  .scrolled {
+    visibility: visible;
+    width: 45px * 7.4;
+  }
+
+  .hidden {
+    visibility: hidden;
+    width: 45px;
   }
 }
 
