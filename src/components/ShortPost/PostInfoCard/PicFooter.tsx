@@ -112,10 +112,23 @@ const EmojiSelector: FC<{
 };
 
 const CommentsButton: FC = (): ReactElement => {
+  const [modalOpened, setModalOpened] = useState<boolean>(false);
+
   return (
     <button className="pic__footer__comments-btn">
-      <FaRegCommentDots size={20} />
+      <FaRegCommentDots
+        size={20}
+        onClick={(): void => setModalOpened(!modalOpened)}
+      />
     </button>
+  );
+};
+
+const CommentsModal: FC<{ state: boolean }> = ({ state }): ReactElement => {
+  return (
+    <article
+      className={`comments-modal ${state ? "opened" : "closed"}`}
+    ></article>
   );
 };
 

@@ -99,6 +99,23 @@
   }
 }
 
+.comments-modal {
+  @include px(45px);
+  @include px(65px);
+
+  background-color: #f46a;
+
+  .opened {
+    width: 100%;
+    height: 100%;
+  }
+
+  .closed {
+    width: 0;
+    height: 0;
+  }
+}
+
 .badge {
   @include blurify(12px);
   @include flexify(center, center);
