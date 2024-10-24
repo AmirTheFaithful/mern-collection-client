@@ -116,6 +116,13 @@
   }
 }
 
+.comment-card {
+  @include px(24px);
+  @include py(16px);
+
+  background-color: #ffc;
+}
+
 .badge {
   @include blurify(12px);
   @include flexify(center, center);

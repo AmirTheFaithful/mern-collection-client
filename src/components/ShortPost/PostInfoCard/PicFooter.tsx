@@ -120,15 +120,25 @@ const CommentsButton: FC = (): ReactElement => {
         size={20}
         onClick={(): void => setModalOpened(!modalOpened)}
       />
+      <CommentsModal state={modalOpened} />
     </button>
   );
 };
 
 const CommentsModal: FC<{ state: boolean }> = ({ state }): ReactElement => {
   return (
-    <article
-      className={`comments-modal ${state ? "opened" : "closed"}`}
-    ></article>
+    <article className={`comments-modal ${state ? "opened" : "closed"}`}>
+      <CommentCard />
+    </article>
+  );
+};
+
+// Later, crucial props should be provided
+const CommentCard: FC = (): ReactElement => {
+  return (
+    <dialog className="comment-card">
+      <p>Hello, World!</p>
+    </dialog>
   );
 };
 
