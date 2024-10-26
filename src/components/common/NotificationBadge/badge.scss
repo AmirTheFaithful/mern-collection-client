@@ -1,0 +1,23 @@
+@import "../../../utils";
+
+.badge {
+  @include blurify(12px);
+  @include flexify(center, center);
+
+  position: absolute;
+  top: -6px;
+  right: -6px;
+
+  font: {
+    size: 10px;
+    weight: 600;
+    family: Arial, Helvetica, sans-serif;
+  }
+  color: var(--badge-text-color);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  box-shadow: 0 2px 16px var(--shadow-color);
+  border-radius: 50%;
+  background-color: rgba(225, 225, 225, 0.2);
+}
