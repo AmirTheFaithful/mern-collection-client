@@ -3,6 +3,7 @@ import ReactDOM, { Root } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import { ThemeContextProvider } from "./context/theme-ctx";
+import { ModalsContextProvider } from "./context/modals-ctx";
 import App from "./App";
 
 import "./locales/i18n"; // Localization bundle
@@ -16,9 +17,11 @@ const root: Root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+      <ModalsContextProvider>
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      </ModalsContextProvider>
     </ThemeContextProvider>
   </React.StrictMode>
 );

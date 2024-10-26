@@ -1,4 +1,11 @@
-import { FC, ReactElement, useState, Dispatch, SetStateAction } from "react";
+import {
+  FC,
+  ReactElement,
+  useState,
+  Dispatch,
+  SetStateAction,
+  useContext,
+} from "react";
 import { useTranslation } from "react-i18next";
 import { IconType } from "react-icons";
 import {
@@ -21,6 +28,7 @@ import {
 } from "react-icons/fa";
 
 import likeSound from "../../../assets/audio/finger-snap.mp3";
+import { ModalsContext } from "../../../context/modals-ctx";
 import "./pic-footer.scss";
 
 const PicFooter: FC = (): ReactElement => {
@@ -112,33 +120,15 @@ const EmojiSelector: FC<{
 };
 
 const CommentsButton: FC = (): ReactElement => {
-  const [modalOpened, setModalOpened] = useState<boolean>(false);
+  const modal = useContext(ModalsContext).commentsModal;
 
   return (
-    <button className="pic__footer__comments-btn">
-      <FaRegCommentDots
-        size={20}
-        onClick={(): void => setModalOpened(!modalOpened)}
-      />
-      <CommentsModal state={modalOpened} />
+    <button
+      className="pic__footer__comments-btn"
+      onClick={(): void => modal[1](true)}
+    >
+      <FaRegCommentDots size={20} />
     </button>
-  );
-};
-
-const CommentsModal: FC<{ state: boolean }> = ({ state }): ReactElement => {
-  return (
-    <article className={`comments-modal ${state ? "opened" : "closed"}`}>
-      <CommentCard />
-    </article>
-  );
-};
-
-// Later, crucial props should be provided
-const CommentCard: FC = (): ReactElement => {
-  return (
-    <dialog className="comment-card">
-      <p>Hello, World!</p>
-    </dialog>
   );
 };
 

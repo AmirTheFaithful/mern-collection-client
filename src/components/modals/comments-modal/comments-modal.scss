@@ -1,0 +1,55 @@
+@import "../../../utils";
+
+[data-theme="light"] {
+  --btn-icon-color: #fffa;
+  --btn-bg-color: #222a;
+}
+
+[data-theme="dark"] {
+  --btn-icon-color: #222a;
+  --btn-bg-color: #ddda;
+}
+
+.comments-modal {
+  @include px(45px);
+  @include px(65px);
+  @include blurify(16px);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 1000;
+  transition: all 0.35s;
+
+  &__close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    color: var(--btn-icon-color);
+    width: 45px;
+    height: 45px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: var(--btn-bg-color);
+  }
+}
+
+.opened {
+  visibility: visible;
+}
+
+.closed {
+  visibility: hidden;
+}
+
+.comment-card {
+  @include px(24px);
+  @include py(16px);
+
+  background-color: #ffc;
+}

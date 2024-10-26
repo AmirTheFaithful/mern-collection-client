@@ -5,6 +5,7 @@ import { useThemeContext } from "./context/theme-ctx";
 import Navbar from "./components/Navbars/2";
 import HomePage from "./pages/home";
 import ProjectsPage from "./pages/projects";
+import CommentsModal from "./components/modals/comments-modal";
 
 export default function App(): ReactElement {
   const { theme } = useThemeContext();
@@ -19,6 +20,9 @@ export default function App(): ReactElement {
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
+
+      {/* Include all modal windows that are waiting for opening */}
+      <CommentsModal />
     </>
   );
 }
