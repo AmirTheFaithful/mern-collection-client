@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
 import { useThemeContext } from "../../../context/theme-ctx";
-import Logo from "../Common/Logo";
+import Logo from "../../common/Logo";
 import LinksContainer from "./LinksContainer";
 
 import "./navbar.scss";

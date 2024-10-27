@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { useThemeContext } from "./context/theme-ctx";
-import Navbar from "./components/Navbars/2";
+import Navbar from "./components/navbars/2";
 import HomePage from "./pages/home";
 import ProjectsPage from "./pages/projects";
 import CommentsModal from "./components/modals/comments-modal";

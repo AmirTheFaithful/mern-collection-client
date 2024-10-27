@@ -1,8 +1,9 @@
 import { ReactElement } from "react";
 
 import { useThemeContext } from "../../../context/theme-ctx";
-import Logo from "../Common/Logo";
+import Logo from "../../common/Logo";
 import ThemeSwitcher from "./ThemeSwitcher";
+import NotificationsIcon from "./NotificationsIcon";
 import Links from "./Links";
 
 import "./nav.scss";
@@ -14,6 +15,7 @@ export default (): ReactElement => {
     <nav id="navbar" data-theme={theme} className={`nav nav-showing`}>
       <Logo />
       <ThemeSwitcher />
+      <NotificationsIcon />
       <Links />
     </nav>
   );

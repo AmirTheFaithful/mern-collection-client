@@ -1,5 +1,13 @@
 @import "../../../utils";
 
+[data-theme="light"] {
+  --badge-text-color: #fc6;
+}
+
+[data-theme="dark"] {
+  --badge-text-color: #faf;
+}
+
 .badge {
   @include blurify(12px);
   @include flexify(center, center);
@@ -14,8 +22,8 @@
     family: Arial, Helvetica, sans-serif;
   }
   color: var(--badge-text-color);
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   text-align: center;
   box-shadow: 0 2px 16px var(--shadow-color);
   border-radius: 50%;
