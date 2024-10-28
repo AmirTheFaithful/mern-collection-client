@@ -4,15 +4,11 @@ import { useThemeContext } from "../../../context/theme-ctx";
 
 import Header from "./PicHeader";
 import Content from "./PicContent";
-import Footer from "./PicFooter";
+import Footer from "../../common/MediaCardFooter";
 
 import "./post-info-card.scss";
 
-export default function PostInfoCard({
-  user,
-}: {
-  user: UserInterface;
-}): ReactElement {
+export default function PostInfoCard({ user }: { user: IUser }): ReactElement {
   const { theme } = useThemeContext();
 
   /* Used temporary hard-coded value as props */

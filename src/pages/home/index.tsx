@@ -5,7 +5,7 @@ import PostInfoCard from "../../components/ShortPost/PostInfoCard";
 import "./index.scss";
 import Avatar from "../../assets/images/avatar.jpg";
 
-const user: UserInterface = {
+const user: IUser = {
   username: "John Doe",
   email: "john@gmail.com",
   avatarURL: Avatar,

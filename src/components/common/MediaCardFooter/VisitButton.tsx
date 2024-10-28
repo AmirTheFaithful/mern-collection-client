@@ -6,7 +6,9 @@ const VisitButton: FC = (): ReactElement => {
   const { t } = useTranslation();
 
   return (
-    <button className="pic__footer__open-btn">{t("postInfoCard.visit")}</button>
+    <button className="media-card__footer__open-btn">
+      {t("postInfoCard.visit")}
+    </button>
   );
 };
 

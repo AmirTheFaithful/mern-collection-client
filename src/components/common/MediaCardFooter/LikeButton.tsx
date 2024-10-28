@@ -1,7 +1,7 @@
 import { FC, ReactElement, useState } from "react";
 import { AiFillLike, AiOutlineLike } from "react-icons/ai";
 
-import likeSound from "../../../../assets/audio/finger-snap.mp3";
+import likeSound from "../../../assets/audio/finger-snap.mp3";
 import EmojiSelector from "./EmojiSelector";
 
 const LikeButton: FC = (): ReactElement => {
@@ -16,7 +16,7 @@ const LikeButton: FC = (): ReactElement => {
 
   return (
     <button
-      className="pic__footer__like-btn"
+      className="media-card__footer__like-btn"
       onClick={(): void => {
         setReacted(!reacted);
         audio.play();

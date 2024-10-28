@@ -4,11 +4,11 @@ import LikeButton from "./LikeButton";
 import CommentsButton from "./CommentsButton";
 import VisitButton from "./VisitButton";
 
-import "./pic-footer.scss";
+import "./media-card-footer.scss";
 
-const PicFooter: FC = (): ReactElement => {
+const MediaCardFooter: FC = (): ReactElement => {
   return (
-    <section className="pic__footer">
+    <section className="media-card__footer">
       <LikeButton />
       <CommentsButton />
       <VisitButton />
@@ -16,4 +16,4 @@ const PicFooter: FC = (): ReactElement => {
   );
 };
 
-export default PicFooter;
+export default MediaCardFooter;

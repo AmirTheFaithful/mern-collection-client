@@ -1,4 +1,4 @@
-@import "../../../../utils";
+@import "../../../utils";
 
 [data-theme="light"] {
   --text-color: #345;
@@ -14,7 +14,7 @@
   --emoji-selector-bc: rgba(16, 16, 16, 0.6);
 }
 
-.pic__footer {
+.media-card__footer {
   @include flexify(center, space-between);
 
   button {
