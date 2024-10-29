@@ -2,6 +2,7 @@ import { FC, ReactElement } from "react";
 
 import CommentCardHeader from "./Header";
 import CommentCardContent from "./Content";
+import CommentCardFooter from "../common/MediaCardFooter";
 
 import "./comment-card.scss";
 
@@ -14,6 +15,7 @@ const CommentCard: FC<{ comment: IComment }> = ({ comment }): ReactElement => {
         date={comment.publicationDate}
       />
       <CommentCardContent content={comment.content} />
+      <CommentCardFooter />
     </dialog>
   );
 };
