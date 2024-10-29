@@ -5,7 +5,7 @@ declare interface IUser {
 }
 
 declare interface IComment {
-  author: IUser; // Instead, should be the ID of the user
+  authorID: string;
   content: string;
   publicationDate: Date;
   // Later, reactions list should be provided

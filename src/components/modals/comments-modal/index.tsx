@@ -23,6 +23,13 @@ const CommentsModal: FC = (): ReactElement => {
       >
         <AiOutlineClose size={25} />
       </button>
+
+      {/* Render all provided comments one by one. */}
+      {/* {comments.map(
+        (comment: IComment, index: number): ReactElement => (
+          <CommentCard comment={comment} key={index} />
+        )
+      )} */}
     </article>
   );
 };
