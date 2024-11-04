@@ -4,3 +4,8 @@
 #page {
   @include flexify(center, center);
 }
+
+body {
+  width: 100%;
+  height: 100vh;
+}

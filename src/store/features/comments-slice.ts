@@ -12,18 +12,14 @@ export const commentsSlice: Slice<CommentsState> = createSlice({
   name: "comments",
   initialState: initialState,
   reducers: {
-    addComment: (
+    addComments: (
       state: CommentsState,
-      action: PayloadAction<IComment>
+      action: PayloadAction<IComment[]>
     ): void => {
-      state.comments.push({
-        authorID: action.payload.authorID,
-        content: action.payload.content,
-        publicationDate: action.payload.publicationDate,
-      });
+      state.comments = action.payload;
     },
   },
 });
 
 export default commentsSlice.reducer;
-export const { addComment } = commentsSlice.actions;
+export const { addComments } = commentsSlice.actions;

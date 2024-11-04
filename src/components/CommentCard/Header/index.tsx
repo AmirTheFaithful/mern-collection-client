@@ -13,6 +13,8 @@ const CommentCardHeader: FC<Props> = ({
   avatarAlt,
   date,
 }): ReactElement => {
+  date = new Date(date);
+
   return (
     <div className="comment-card__header">
       <img src={avatarURL} alt={avatarAlt} />

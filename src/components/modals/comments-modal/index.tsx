@@ -17,11 +17,11 @@ const CommentsModal: FC = (): ReactElement => {
   );
 
   return (
-    <article
+    <div
+      role="modal"
       data-theme={theme}
       className={`comments-modal ${modal[0] ? "opened" : "closed"}`}
     >
-      {/* <CommentCard /> */}
       <button
         className="comments-modal__close-btn"
         onClick={(): void => modal[1](false)}
@@ -31,11 +31,13 @@ const CommentsModal: FC = (): ReactElement => {
 
       {/* Render all provided comments one by one. */}
       {comments.map(
-        (comment: IComment, index: number): ReactElement => (
-          <CommentCard comment={comment} key={index} />
+        (comment: IComment): ReactElement => (
+          <CommentCard comment={comment} key={comment.content} />
         )
       )}
-    </article>
+
+      {/* <CommentCard comment={comments[0]} /> */}
+    </div>
   );
 };
 
