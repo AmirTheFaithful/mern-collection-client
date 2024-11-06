@@ -1,4 +1,4 @@
-import { ReactElement, useEffect, useState, MouseEventHandler } from "react";
+import { ReactElement, useState, MouseEventHandler } from "react";
 import { FaMoon } from "react-icons/fa";
 import { FiSun } from "react-icons/fi";
 
@@ -9,9 +9,10 @@ import "./theme-switcher.scss";
 
 export default (): ReactElement => {
   const { theme, setTheme } = useThemeContext();
-  const [isDark, setIsDark] = useState<boolean>(true);
 
-  const handleThemeSwitch: MouseEventHandler = async (): Promise<void> => {
+  const handleThemeSwitch: MouseEventHandler = async (event): Promise<void> => {
+    event.preventDefault();
+
     const click = new Audio(clickSound);
     await click.play();
 
@@ -25,7 +26,7 @@ export default (): ReactElement => {
   return (
     <div className="theme-switcher">
       <p className="toggle" onClick={handleThemeSwitch}>
-        {isDark ? <FiSun size={16} /> : <FaMoon size={16} />}
+        {theme === "dark" ? <FiSun size={16} /> : <FaMoon size={16} />}
       </p>
     </div>
   );
