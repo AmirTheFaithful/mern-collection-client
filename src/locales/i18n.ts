@@ -7,12 +7,19 @@ i18n
   .use(initReactI18next)
   .init({
     debug: true,
-    fallbackLng: "en",
     resources: {
       en: {
         translation: {
           postInfoCard: {
             visit: "Visit Profile",
+          },
+          loginPage: {
+            heading: "Sign In",
+            subheading:
+              "Log in to your account by entering your email and password.",
+            emailField: "Email",
+            passwordField: "Password",
+            submitButton: "Login",
           },
         },
       },
@@ -21,12 +28,28 @@ i18n
           postInfoCard: {
             visit: "Відвідати Профіль",
           },
+          loginPage: {
+            heading: "Увійдіть",
+            subheading:
+              "Увійдіть до свого облікового запису, ввівши Ваш eMail та пароль.",
+            emailField: "Ел. пошта",
+            passwordField: "Пароль",
+            submitButton: "Увійти",
+          },
         },
       },
       ar: {
         translation: {
           postInfoCard: {
             visit: "زيارة الملف الشخصي",
+          },
+          loginPage: {
+            heading: "تسجيل الدخول",
+            subheading:
+              "قم بتسجيل الدخول إلى حسابك عن طريق إدخال بريدك الإلكتروني وكلمة المرور.",
+            emailField: "بريد إلكتروني",
+            passwordField: "كلمة المرور",
+            submitButton: "تسجيل الدخول",
           },
         },
       },
