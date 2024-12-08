@@ -20,10 +20,7 @@
   button {
     @include blurify(12px);
 
-    font: {
-      size: 16px;
-      family: Arial, Helvetica, sans-serif;
-    }
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--text-color);
     cursor: pointer;
     border: none;
@@ -35,8 +32,6 @@
 
   &__like-btn,
   &__comments-btn {
-    width: 45px;
-    height: 45px;
     border-radius: 50%;
 
     &:hover {
@@ -48,14 +43,29 @@
     z-index: 10;
   }
 
-  &__open-btn {
-    @include py(12px);
-    @include px(20px);
-
+  &__visit-btn {
     border-radius: 6px;
 
     &:hover {
       color: #2382fe;
+    }
+  }
+}
+
+@media (min-width: 300px) {
+  .media-card__footer {
+    button {
+      font-size: 12px;
+    }
+
+    &__like-btn,
+    &__comments-btn {
+      width: 35px;
+      height: 35px;
+    }
+
+    &__visit-btn {
+      padding: 8px 12px;
     }
   }
 }
