@@ -5,8 +5,12 @@ declare interface IUser {
 }
 
 declare interface IComment {
+  parentID?: string;
   authorID: string;
-  content: string;
+  media: {
+    content: any;
+    kind: string;
+  };
   publicationDate: Date;
   // Later, reactions list should be provided
 }
