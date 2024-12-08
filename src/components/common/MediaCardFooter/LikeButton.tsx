@@ -17,9 +17,9 @@ const LikeButton: FC = (): ReactElement => {
   return (
     <button
       className="media-card__footer__like-btn"
-      onClick={(): void => {
+      onClick={async (): Promise<void> => {
         setReacted(!reacted);
-        audio.play();
+        await audio.play();
       }}
       onMouseEnter={(): void => {
         setScrolled(true);

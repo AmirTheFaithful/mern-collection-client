@@ -1,4 +1,11 @@
-import { FC, ReactElement, useContext, useState, useEffect } from "react";
+import {
+  FC,
+  ReactElement,
+  useContext,
+  useState,
+  useEffect,
+  MouseEventHandler,
+} from "react";
 import axios, { AxiosResponse } from "axios";
 import { FaRegCommentDots } from "react-icons/fa";
 
@@ -13,7 +20,11 @@ const CommentsButton: FC = (): ReactElement => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
 
-  useEffect(() => {
+  const handleClick: MouseEventHandler = (): void => {
+    modal[1](true);
+  };
+
+  useEffect((): void => {
     const fetchComments = async (): Promise<void> => {
       try {
         // For now fetch all comments.
@@ -31,17 +42,14 @@ const CommentsButton: FC = (): ReactElement => {
       }
     };
 
-    fetchComments();
+    if (modal[0]) {
+      fetchComments();
+    }
     // Runs only once, since it's have no dependencies.
-  }, [dispatch]);
+  }, []);
 
   return (
-    <button
-      className="media-card__footer__comments-btn"
-      onClick={(): void => {
-        modal[1](true);
-      }}
-    >
+    <button className="media-card__footer__comments-btn" onClick={handleClick}>
       <FaRegCommentDots size={20} />
     </button>
   );
