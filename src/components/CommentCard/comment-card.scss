@@ -1,0 +1,126 @@
+@import "../../utils";
+
+[data-theme="light"] {
+  --comment-bg: rgba(25, 25, 25, 0.5);
+  --comment-text-bg: rgba(25, 25, 25, 0.2);
+  --comment-text-shadow-color: #ccc6;
+  --skeleton-element-color: #bbf6;
+}
+
+[data-theme="dark"] {
+  --comment-bg: rgba(225, 225, 225, 0.5);
+  --comment-text-bg: rgba(225, 225, 225, 0.2);
+  --comment-text-shadow-color: #4446;
+  --skeleton-element-color: #ecf6;
+}
+
+.comment-card {
+  box-shadow: 0 4px 24px #222a;
+  border-radius: 20px;
+  background-color: var(--comment-bg);
+
+  &__header {
+    @include flexify(center, space-between);
+
+    img {
+      border-radius: 50%;
+    }
+
+    .avatar-skeleton {
+      border-radius: 50%;
+      background-color: var(--skeleton-element-color);
+    }
+
+    &__user-info {
+      @include flexify(center, normal);
+
+      h2 {
+        font: {
+          wieght: 600;
+          family: Arial;
+        }
+        color: white;
+      }
+
+      .username-skeleton {
+        border-radius: 12px;
+        background-color: var(--skeleton-element-color);
+      }
+    }
+
+    time {
+      font: {
+        weight: 400;
+        family: sans-serif;
+      }
+      color: #edd;
+    }
+  }
+
+  &__content {
+    p {
+      font: {
+        weight: 600;
+        family: Arial;
+      }
+      color: white;
+      box-shadow: 0 0 12px var(--comment-text-shadow-color);
+      background-color: var(--comment-text-bg);
+    }
+
+    .content-skeleton {
+      background-color: var(--skeleton-element-color);
+    }
+  }
+}
+
+@media (min-width: 300px) {
+  .comment-card {
+    padding: 12px 16px;
+
+    &__header {
+      img {
+        width: 25px;
+      }
+
+      .avatar-skeleton {
+        width: 25px;
+        height: 25px;
+      }
+
+      &__user-info {
+        column-gap: 8px;
+
+        h2 {
+          font-size: 12px;
+        }
+
+        .username-skeleton {
+          width: 100px;
+          height: 12px;
+        }
+      }
+
+      time {
+        font-size: 10px;
+      }
+    }
+
+    &__content {
+      font-size: 12px;
+      padding-top: 16px;
+      padding-left: 32px;
+
+      p {
+        padding: 8px 12px;
+        border-radius: 12px;
+      }
+
+      .content-skeleton {
+        width: 160px;
+        height: 14px;
+        border-radius: 12px;
+      }
+    }
+  }
+}

@@ -33,27 +33,15 @@ const CommentCard: FC<{ comment: IComment }> = ({ comment }): ReactElement => {
     fetchUser();
   }, [comment.authorID]);
 
-  if (loading) {
-    return <div>Lodaing...</div>;
-  }
-
-  if (error) {
-    return <div>Error.</div>;
-  }
-
-  if (!author) {
-    return <div>Author not found.</div>;
-  }
-
   return (
     <article className="comment-card">
       <CommentCardHeader
-        avatarURL={author.avatarURL}
-        avatarAlt={author.username}
+        avatarURL={author?.avatarURL}
+        username={author?.username}
         date={comment.publicationDate}
+        loading={loading}
       />
-      <CommentCardContent content={comment.content} />
-      <CommentCardFooter />
+      <CommentCardContent content={comment.media.content} loading={loading} />
     </article>
   );
 };

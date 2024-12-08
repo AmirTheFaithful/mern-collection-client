@@ -1,11 +1,12 @@
 import { FC, ReactElement } from "react";
 
-const CommentCardContent: FC<{ content: string }> = ({
+const CommentCardContent: FC<{ content: string; loading: boolean }> = ({
   content,
+  loading,
 }): ReactElement => {
   return (
     <section className="comment-card__content">
-      <p>{content}</p>
+      {loading ? <div className="content-skeleton"></div> : <p>{content}</p>}
     </section>
   );
 };
