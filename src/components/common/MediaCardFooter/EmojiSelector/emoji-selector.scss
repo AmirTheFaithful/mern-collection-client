@@ -7,14 +7,11 @@
   top: 0;
 
   display: flex;
-  column-gap: 20px;
   align-items: center;
 
-  height: 45px;
   z-index: 5;
   box-shadow: 0 2px 16px 2px var(--shadow-color);
   transition: width 0.35s, visibility 0.35s, transform 0.35s;
-  padding-left: 55px;
   border-radius: 9999px;
   background-color: var(--background-color);
 
@@ -35,4 +32,17 @@
 .hidden {
   visibility: hidden;
   width: 45px;
+}
+
+@media (min-width: 300px) {
+  .emoji-selector {
+    height: 35px;
+    column-gap: 12px;
+    padding-left: 20px;
+  }
+
+  .scrolled {
+    visibility: visible;
+    width: 45px * 4.7;
+  }
 }
