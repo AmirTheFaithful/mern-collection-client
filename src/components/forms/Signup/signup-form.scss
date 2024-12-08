@@ -1,0 +1,48 @@
+@import "../../../utils";
+
+[data-theme="light"] {
+  --input-bg-color: #4f6ca844;
+  --submit-btn-bg-color: #678921ee;
+}
+
+[data-theme="dark"] {
+}
+
+#signup-form {
+  @include flexify(center, normal, column);
+
+  .form-section {
+    @include flexify(center, normal, column);
+
+    .form-input {
+      background-color: var(--input-bg-color);
+    }
+  }
+
+  [type="submit"] {
+    background-color: var(--submit-btn-bg-color);
+  }
+}
+
+// Mobile
+@media (min-width: 300px) {
+  #signup-form {
+    row-gap: 40px;
+    margin-top: 60px;
+
+    .form__section {
+      row-gap: 20px;
+    }
+  }
+}
+
+// Tablet
+@media (min-width: 767px) {
+  #signup-form {
+  }
+}
+
+// Desktop
+@media (min-width: 1023px) {
+  // Code...
+}
