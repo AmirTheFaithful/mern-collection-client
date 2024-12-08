@@ -17,12 +17,15 @@
   @include px(16px);
   @include blurify(12px);
 
-  font: {
-    size: 20px;
-    family: Arial, Helvetica, sans-serif;
-  }
+  font-family: Arial, Helvetica, sans-serif;
   color: var(--text-color);
   box-shadow: 0 0 16px 2px var(--shadow-color);
   border-radius: 6px;
   background-color: var(--background-color);
+}
+
+@media (min-width: 300px) {
+  .pic__content {
+    font-size: 16px;
+  }
 }

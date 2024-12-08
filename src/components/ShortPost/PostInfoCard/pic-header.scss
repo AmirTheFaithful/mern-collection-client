@@ -15,21 +15,15 @@
 
   &__author {
     @include flexify(center, initial);
-    column-gap: 25px;
 
     img {
-      width: 45px;
-      height: 45px;
       border-radius: 50%;
       box-shadow: 0 2px 16px var(--avatar-shadow-color);
     }
 
     h3 {
-      font: {
-        size: 20px;
-        family: Arial, Helvetica, sans-serif;
-      }
       color: #ffff;
+      font-family: Arial, Helvetica, sans-serif;
     }
   }
 
@@ -37,5 +31,26 @@
     color: var(--data-color);
     font-weight: 600;
     font-family: "Times New Roman", Times, serif;
+  }
+}
+
+@media (min-width: 320px) {
+  .pic__header {
+    &__author {
+      column-gap: 8px;
+
+      img {
+        width: 28px;
+        height: 28px;
+      }
+
+      h3 {
+        font-size: 12px;
+      }
+    }
+
+    &__date {
+      font-size: 10px;
+    }
   }
 }

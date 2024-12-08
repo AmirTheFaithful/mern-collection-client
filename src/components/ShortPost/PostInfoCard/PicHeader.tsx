@@ -15,7 +15,7 @@ const PicHeader: FC<Props> = (props: Props): ReactElement => {
         <img src={props.authorAvatarURL} alt={`${props.authorName}'s avatar`} />
         <h3>{props.authorName}</h3>
       </div>
-      <time className="pic__header__date">{`${props.postDate.getDay()}/${props.postDate.getDate()}/${props.postDate.getFullYear()}`}</time>
+      <time className="pic__header__date">{`${props.postDate.getDate()}/${props.postDate.getMonth()}/${props.postDate.getFullYear()}`}</time>
     </section>
   );
 };
