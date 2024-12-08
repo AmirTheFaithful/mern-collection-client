@@ -11,7 +11,7 @@ const NotificationsIcon: FC = (): ReactElement => {
   if (notifications.length > 0) {
     return (
       <i className="notifications-icon ">
-        <FaBell size={23} />
+        <FaBell size={20} />
         <NotificationBadge count={notifications.length} />
       </i>
     );
