@@ -1,2 +1,7 @@
 node_modules
 *storybook.log
+src/media-query-etalone.txt
+
+# Components and code laboratory files:
+src/auth-lab
+src/cookies
