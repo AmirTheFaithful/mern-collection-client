@@ -30,13 +30,11 @@ const CommentsModal: FC = (): ReactElement => {
       </button>
 
       {/* Render all provided comments one by one. */}
-      {comments.map(
-        (comment: IComment): ReactElement => (
-          <CommentCard comment={comment} key={comment.content} />
-        )
+      {comments.map((comment: IComment): ReactElement | null =>
+        !comment.parentID ? (
+          <CommentCard comment={comment} key={comment.media.content} />
+        ) : null
       )}
-
-      {/* <CommentCard comment={comments[0]} /> */}
     </div>
   );
 };

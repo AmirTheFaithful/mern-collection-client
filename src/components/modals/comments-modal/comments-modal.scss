@@ -11,8 +11,6 @@
 }
 
 .comments-modal {
-  @include px(45px);
-  @include px(65px);
   @include blurify(16px);
 
   position: absolute;
@@ -21,7 +19,12 @@
   right: 0;
   bottom: 0;
 
+  display: flex;
+  row-gap: 40px;
+  flex-direction: column;
+
   z-index: 1000;
+  // padding: 100px 300px;
   transition: all 0.35s;
 
   &__close-btn {
@@ -30,10 +33,9 @@
     right: 20px;
 
     color: var(--btn-icon-color);
-    width: 45px;
-    height: 45px;
     border: none;
     cursor: pointer;
+    box-shadow: 0 0 16px #222c;
     border-radius: 50%;
     background-color: var(--btn-bg-color);
   }
@@ -47,9 +49,13 @@
   visibility: hidden;
 }
 
-.comment-card {
-  @include px(24px);
-  @include py(16px);
+@media (min-width: 300px) {
+  .comments-modal {
+    padding: 80px 20px;
 
-  background-color: #ffc;
+    &__close-btn {
+      width: 25px;
+      height: 25px;
+    }
+  }
 }
